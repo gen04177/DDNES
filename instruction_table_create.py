@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 # Adapted from tables found in https://github.com/fogleman/nes by Michael Fogleman
 
@@ -129,8 +129,8 @@ modes = ["DUMMY",
 "ZEROPAGE_Y"]
 
 uniqueinsts = sorted(set(instructionNames))
-for x in xrange(0, len(uniqueinsts), 1):
+for x in range(0, len(uniqueinsts), 1):
 	print("{},".format(uniqueinsts[x]))
 
-for x in xrange(0, 256, 1):
+for x in range(0, 256, 1):
 	print("{{{}, \"{}\", {}, {}, {}, {}}}, \t\t\t// {:02x}".format(instructionNames[x], instructionNames[x], modes[instructionModes[x]], instructionSizes[x], instructionCycles[x], instructionPageCycles[x], x))
